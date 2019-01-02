@@ -1,0 +1,105 @@
+\section{Input Class Reference}
+\label{class_input}\index{Input@{Input}}
+
+
+Class allowing the saving of all the variables to define the system we want to solve. In fact, it takes as input variable (integer or double)\+: Timestep, Dimension, Order, Number\+Steps, Write\+Output\+Timestep. Moreover, \doxyref{Input}{p.}{class_input} object needs 3 matrix to define the system \+: Initial\+Condition\+Matrix, Coefficient\+Matrix, Function\+Matrix. Matrix are defined to be vector of vector of double. \doxyref{Input}{p.}{class_input} variables are given to the input class by the constructor. The other methods are getter allowing the access to theses private attributes.  
+
+
+
+
+{\ttfamily \#include $<$Input.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_input_abae3f379d3f157cf42dc857309832dba}} 
+\textbf{ Input} ()
+\begin{DoxyCompactList}\small\item\em Constructor allowing the definition of the system we want to solve. In this class, the three input matrix were hardcode with the order of the system. \end{DoxyCompactList}\item 
+\textbf{ Input} (double time\+\_\+step, int dimension, int order, int number\+\_\+steps, int write\+\_\+output\+\_\+timestep, const vector$<$ vector$<$ double $>$$>$ \&initial\+\_\+condition\+\_\+matrix, const vector$<$ vector$<$ double $>$$>$ \&changing\+\_\+matrix, const vector$<$ vector$<$ double $>$$>$ \&past\+\_\+step\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em Constructor of the class allowing the definition of the system. \end{DoxyCompactList}\item 
+int \textbf{ Ask\+Number\+To\+User} ()
+\begin{DoxyCompactList}\small\item\em Method allowing the asking of a number to the user. The user will enter this input number thank to the keyboard. \end{DoxyCompactList}\item 
+\mbox{\label{class_input_a47ccd0138fd87abb7ddbaae502930c45}} 
+double \& \textbf{ Get\+Timestep} () const
+\begin{DoxyCompactList}\small\item\em Return the time step attribute. \end{DoxyCompactList}\item 
+\mbox{\label{class_input_a1fff5b534cc24e5ac8651366fa9cc8c1}} 
+unsigned long \textbf{ Get\+Dimension} () const
+\begin{DoxyCompactList}\small\item\em Return the dimension attribute. \end{DoxyCompactList}\item 
+\mbox{\label{class_input_ab4191112b8950f47f14a4407816b07d5}} 
+int \& \textbf{ Get\+Order} () const
+\begin{DoxyCompactList}\small\item\em Return the solver attribute. \end{DoxyCompactList}\item 
+\mbox{\label{class_input_aef65eb3f06d64b552f38d57935cb5352}} 
+int \& \textbf{ Get\+Number\+Steps} () const
+\begin{DoxyCompactList}\small\item\em Return the overall number of steps attribute. \end{DoxyCompactList}\item 
+\mbox{\label{class_input_ae42ae51a450a823789f86b02bfbbcb0e}} 
+int \& \textbf{ Get\+Write\+Output\+Timestep} () const
+\begin{DoxyCompactList}\small\item\em Return the Timestep defining when we write the output solution. \end{DoxyCompactList}\item 
+\mbox{\label{class_input_a13947607d3f8e48c5d4db22d729f2674}} 
+vector$<$ vector$<$ double $>$ $>$ \textbf{ Get\+Initial\+Condition\+Matrix} () const
+\begin{DoxyCompactList}\small\item\em Return the initial condition matrix. \end{DoxyCompactList}\item 
+\mbox{\label{class_input_ad4cbcaa4be06227c960cf30629af44ea}} 
+vector$<$ vector$<$ double $>$ $>$ \textbf{ Get\+Coefficient\+Matrix} () const
+\begin{DoxyCompactList}\small\item\em Return the changing matrix corresponding to several states when the program run. \end{DoxyCompactList}\item 
+\mbox{\label{class_input_ab1813f72891b82c461ab2a075fbd8d00}} 
+vector$<$ vector$<$ double $>$ $>$ \textbf{ Get\+Function\+Matrix} () const
+\begin{DoxyCompactList}\small\item\em Return the past step corresponding to i-\/1 for the function defining the problem. \end{DoxyCompactList}\item 
+\mbox{\label{class_input_af2db35ba67c8a8ccd23bef6a482fc291}} 
+\textbf{ $\sim$\+Input} ()
+\begin{DoxyCompactList}\small\item\em Destructor allowing the liberation of memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class allowing the saving of all the variables to define the system we want to solve. In fact, it takes as input variable (integer or double)\+: Timestep, Dimension, Order, Number\+Steps, Write\+Output\+Timestep. Moreover, \doxyref{Input}{p.}{class_input} object needs 3 matrix to define the system \+: Initial\+Condition\+Matrix, Coefficient\+Matrix, Function\+Matrix. Matrix are defined to be vector of vector of double. \doxyref{Input}{p.}{class_input} variables are given to the input class by the constructor. The other methods are getter allowing the access to theses private attributes. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_input_a6e9028a0843a2db4271a4e3bf3eb941f}} 
+\index{Input@{Input}!Input@{Input}}
+\index{Input@{Input}!Input@{Input}}
+\subsubsection{Input()}
+{\footnotesize\ttfamily Input\+::\+Input (\begin{DoxyParamCaption}\item[{double}]{time\+\_\+step,  }\item[{int}]{dimension,  }\item[{int}]{order,  }\item[{int}]{number\+\_\+steps,  }\item[{int}]{write\+\_\+output\+\_\+timestep,  }\item[{const vector$<$ vector$<$ double $>$$>$ \&}]{initial\+\_\+condition\+\_\+matrix,  }\item[{const vector$<$ vector$<$ double $>$$>$ \&}]{coefficient\+\_\+matrix,  }\item[{const vector$<$ vector$<$ double $>$$>$ \&}]{function\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor of the class allowing the definition of the system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+\_\+step} & \+: Double representing the time step we will use in the O\+DE solver. \\
+\hline
+{\em dimension} & \+: Integer representing the dimension of the system. \\
+\hline
+{\em order} & \+: Integer representing the order of the system. \\
+\hline
+{\em number\+\_\+steps} & \+: Integer representing the overall number of steps we will do to solve the system. \\
+\hline
+{\em write\+\_\+output\+\_\+timestep} & \+: Integer representing the steps when we write the solutions \\
+\hline
+{\em initial\+\_\+condition\+\_\+matrix} & \+: Matrix (which is a vector of vector of double) representing the initial conditions of the system. \\
+\hline
+{\em coefficient\+\_\+matrix} & \+: Matrix (which is a vector of vector of double) containing the value of the function defining the system for all the step we want to compute. \\
+\hline
+{\em function\+\_\+matrix} & \+: Matrix (which is a vector of vector of double) allowing the definition of the R\+HS of the O\+DE. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{class_input_ae6eae7ea32488c4ce43a027b3b2fabc2}} 
+\index{Input@{Input}!Ask\+Number\+To\+User@{Ask\+Number\+To\+User}}
+\index{Ask\+Number\+To\+User@{Ask\+Number\+To\+User}!Input@{Input}}
+\subsubsection{Ask\+Number\+To\+User()}
+{\footnotesize\ttfamily int Input\+::\+Ask\+Number\+To\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method allowing the asking of a number to the user. The user will enter this input number thank to the keyboard. 
+
+\begin{DoxyReturn}{Returns}
+\+: Returns the integer number given by the user. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Input.\+h\item 
+Input.\+cpp\end{DoxyCompactItemize}

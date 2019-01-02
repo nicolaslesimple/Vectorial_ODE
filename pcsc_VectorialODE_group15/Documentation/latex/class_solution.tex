@@ -1,0 +1,132 @@
+\section{Solution Class Reference}
+\label{class_solution}\index{Solution@{Solution}}
+
+
+This class allows the saving in the memory and the writing in a output file of the solution of the O\+DE system. The constructor need the input object defining the system to create a consistent format for the solution. In this class, method allowing the retrieve, the modification and the writing of the solution are implemented. The attributes of this class are the the solution matrix and two integer defining the size of this solution.  
+
+
+
+
+{\ttfamily \#include $<$Solution.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_solution_ab55bd4b023d596ce11aaf737b9a6123b}} 
+\textbf{ Solution} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\textbf{ Solution} (unsigned long rows, int columns)
+\begin{DoxyCompactList}\small\item\em Constructor to initialized properly the size of the solution with the input object. This overwritten constructor allows the declaration of the solution matrix with the corresponding size and the initialisation of all elements to 0. \end{DoxyCompactList}\item 
+\textbf{ Solution} (const \textbf{ Input} \&input)
+\begin{DoxyCompactList}\small\item\em Constructor to initialized properly the size of the solution with the input object. This overwritten constructor allows the declaration of the solution matrix with the corresponding size and the initialisation of all elements to 0. \end{DoxyCompactList}\item 
+const double \textbf{ Get\+Solution\+Value\+From\+Index} (int rows\+Index, int columns\+Index) const
+\begin{DoxyCompactList}\small\item\em Getter allowing the access to one particular element of the matrix solution given two indexes. \end{DoxyCompactList}\item 
+void \textbf{ Modify\+Solution\+By\+Columns} (vector$<$ double $>$ \&vector, int position)
+\begin{DoxyCompactList}\small\item\em Method that modify the solution matrix by reference given a columns index. This method only modify the solution by columns, which means that the selected columns is erase and replace by the vector of our choice. \end{DoxyCompactList}\item 
+void \textbf{ Solution\+To\+File} (const string \&filename) const
+\begin{DoxyCompactList}\small\item\em Method allowing the writing of the solution in a output file. This method write the solution matrix into the file corresponding to the given filename. \end{DoxyCompactList}\item 
+\mbox{\label{class_solution_ad5fff21443386017ec0017286c014743}} 
+vector$<$ vector$<$ double $>$ $>$ {\bfseries Get\+Solution\+O\+DE} ()
+\item 
+\mbox{\label{class_solution_a5d245f7409aacf6ace5e965b7879a580}} 
+\textbf{ $\sim$\+Solution} ()
+\begin{DoxyCompactList}\small\item\em Destructor by default. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class allows the saving in the memory and the writing in a output file of the solution of the O\+DE system. The constructor need the input object defining the system to create a consistent format for the solution. In this class, method allowing the retrieve, the modification and the writing of the solution are implemented. The attributes of this class are the the solution matrix and two integer defining the size of this solution. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_solution_abd7dde6fe8cc748968a215f14c30bbcd}} 
+\index{Solution@{Solution}!Solution@{Solution}}
+\index{Solution@{Solution}!Solution@{Solution}}
+\subsubsection{Solution()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Solution\+::\+Solution (\begin{DoxyParamCaption}\item[{unsigned long}]{rows,  }\item[{int}]{columns }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor to initialized properly the size of the solution with the input object. This overwritten constructor allows the declaration of the solution matrix with the corresponding size and the initialisation of all elements to 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & \+: Integer defining the number of rows in the solution matrix. \\
+\hline
+{\em columns} & \+: Integer defining the number of columns in the solution matrix. \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_solution_aef3f82ea25c9c6bb6b489dac8b3fa7fb}} 
+\index{Solution@{Solution}!Solution@{Solution}}
+\index{Solution@{Solution}!Solution@{Solution}}
+\subsubsection{Solution()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Solution\+::\+Solution (\begin{DoxyParamCaption}\item[{const \textbf{ Input} \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor to initialized properly the size of the solution with the input object. This overwritten constructor allows the declaration of the solution matrix with the corresponding size and the initialisation of all elements to 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & \+: \doxyref{Input}{p.}{class_input} object containing all information to define the system and thus allowing the access to theses variables thanks to getter to define our solution matrix \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{class_solution_ae986f163f432f412873a46534fb613b7}} 
+\index{Solution@{Solution}!Get\+Solution\+Value\+From\+Index@{Get\+Solution\+Value\+From\+Index}}
+\index{Get\+Solution\+Value\+From\+Index@{Get\+Solution\+Value\+From\+Index}!Solution@{Solution}}
+\subsubsection{Get\+Solution\+Value\+From\+Index()}
+{\footnotesize\ttfamily const double Solution\+::\+Get\+Solution\+Value\+From\+Index (\begin{DoxyParamCaption}\item[{int}]{rows\+Index,  }\item[{int}]{columns\+Index }\end{DoxyParamCaption}) const}
+
+
+
+Getter allowing the access to one particular element of the matrix solution given two indexes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Rows\+Index} & \+: Integer defining the rows where we want to get the value of the element \\
+\hline
+{\em Columns\+Index} & \+: Integer defining the columns where we want to get the value of the element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Double corresponding to the defined element of the solution matrix 
+\end{DoxyReturn}
+\mbox{\label{class_solution_a6e15412dd197d6b9fa0505ebc2b0b5d2}} 
+\index{Solution@{Solution}!Modify\+Solution\+By\+Columns@{Modify\+Solution\+By\+Columns}}
+\index{Modify\+Solution\+By\+Columns@{Modify\+Solution\+By\+Columns}!Solution@{Solution}}
+\subsubsection{Modify\+Solution\+By\+Columns()}
+{\footnotesize\ttfamily void Solution\+::\+Modify\+Solution\+By\+Columns (\begin{DoxyParamCaption}\item[{vector$<$ double $>$ \&}]{vector,  }\item[{int}]{position }\end{DoxyParamCaption})}
+
+
+
+Method that modify the solution matrix by reference given a columns index. This method only modify the solution by columns, which means that the selected columns is erase and replace by the vector of our choice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector} & \+: Vector of double use to modify the solution matrix. The value of this vector will be put in the selected columns of the solution matrix \\
+\hline
+{\em position} & \+: Integer defining the index of the columns of the matrix solution we want to modify \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_solution_abb46fd70c953b6391523257da02ac22d}} 
+\index{Solution@{Solution}!Solution\+To\+File@{Solution\+To\+File}}
+\index{Solution\+To\+File@{Solution\+To\+File}!Solution@{Solution}}
+\subsubsection{Solution\+To\+File()}
+{\footnotesize\ttfamily void Solution\+::\+Solution\+To\+File (\begin{DoxyParamCaption}\item[{const string \&}]{filename }\end{DoxyParamCaption}) const}
+
+
+
+Method allowing the writing of the solution in a output file. This method write the solution matrix into the file corresponding to the given filename. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & \+: String corresponding to the entire path and filename of the file of destination. The filename needs to have the extension. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Solution.\+h\item 
+Solution.\+cpp\end{DoxyCompactItemize}

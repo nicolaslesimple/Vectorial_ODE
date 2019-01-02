@@ -1,0 +1,55 @@
+\section{Runge\+Kutta Class Reference}
+\label{class_runge_kutta}\index{Runge\+Kutta@{Runge\+Kutta}}
+
+
+Class allowing a more precise definition of one of the O\+DE solvers technics which is Runge-\/\+Kutta method. This is an abstract class as before because the method Solve\+Vectorial\+O\+DE is virtual and it will be defined in different ways in the inherited classes. The different Runge-\/\+Kutta method correspond to the different order we use to solve the system.  
+
+
+
+
+{\ttfamily \#include $<$Runge\+Kutta.\+h$>$}
+
+Inheritance diagram for Runge\+Kutta\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_runge_kutta}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Runge\+Kutta} (\textbf{ Input} \&input, \textbf{ Solution} \&solution)
+\begin{DoxyCompactList}\small\item\em Constructor inherited from the \doxyref{Vectorial\+O\+DE}{p.}{class_vectorial_o_d_e} class. \end{DoxyCompactList}\item 
+\mbox{\label{class_runge_kutta_a6282be932f2dc501deb099f071953ae2}} 
+virtual void {\bfseries Solve\+Vectorial\+O\+DE} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class allowing a more precise definition of one of the O\+DE solvers technics which is Runge-\/\+Kutta method. This is an abstract class as before because the method Solve\+Vectorial\+O\+DE is virtual and it will be defined in different ways in the inherited classes. The different Runge-\/\+Kutta method correspond to the different order we use to solve the system. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_runge_kutta_a578f5ec321d4228db31b2dd21091c3da}} 
+\index{Runge\+Kutta@{Runge\+Kutta}!Runge\+Kutta@{Runge\+Kutta}}
+\index{Runge\+Kutta@{Runge\+Kutta}!Runge\+Kutta@{Runge\+Kutta}}
+\subsubsection{Runge\+Kutta()}
+{\footnotesize\ttfamily Runge\+Kutta\+::\+Runge\+Kutta (\begin{DoxyParamCaption}\item[{\textbf{ Input} \&}]{input,  }\item[{\textbf{ Solution} \&}]{solution }\end{DoxyParamCaption})}
+
+
+
+Constructor inherited from the \doxyref{Vectorial\+O\+DE}{p.}{class_vectorial_o_d_e} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & \+: \doxyref{Input}{p.}{class_input} object containing all variables needed to solve the O\+DE. \\
+\hline
+{\em solution} & \+: Output object where we will store the solution. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Runge\+Kutta.\+h\item 
+Runge\+Kutta.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,74 @@
+\section{Bashforth\+Fourth\+Step Class Reference}
+\label{class_bashforth_fourth_step}\index{Bashforth\+Fourth\+Step@{Bashforth\+Fourth\+Step}}
+
+
+Class implementing the Adam-\/\+Bashforth 4 steps to solve the O\+DE system. \doxyref{Bashforth}{p.}{class_bashforth} method allows the solving of the O\+DE system. This class is implementing in such a way that it only writes the solution every Write\+Output\+Timestep. This class is inherited from \doxyref{Bashforth}{p.}{class_bashforth} class also inherited from \doxyref{Vectorial\+O\+DE}{p.}{class_vectorial_o_d_e}.  
+
+
+
+
+{\ttfamily \#include $<$Bashforth\+Fourth\+Step.\+h$>$}
+
+Inheritance diagram for Bashforth\+Fourth\+Step\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_bashforth_fourth_step}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Bashforth\+Fourth\+Step} (\textbf{ Input} \&input, \textbf{ Solution} \&solution)
+\begin{DoxyCompactList}\small\item\em Constructor inherited from the \doxyref{Bashforth}{p.}{class_bashforth} class (also inherited from \doxyref{Vectorial\+O\+DE}{p.}{class_vectorial_o_d_e}) \end{DoxyCompactList}\item 
+void \textbf{ Solve\+Vectorial\+O\+DE} () override
+\begin{DoxyCompactList}\small\item\em Method allowing the implementation of Adam-\/\+Bashforth method 4 steps. This method is one of the several definition of the virtual inherited method. There are no arguments as all information needed are stored and are accessible in the input object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class implementing the Adam-\/\+Bashforth 4 steps to solve the O\+DE system. \doxyref{Bashforth}{p.}{class_bashforth} method allows the solving of the O\+DE system. This class is implementing in such a way that it only writes the solution every Write\+Output\+Timestep. This class is inherited from \doxyref{Bashforth}{p.}{class_bashforth} class also inherited from \doxyref{Vectorial\+O\+DE}{p.}{class_vectorial_o_d_e}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_bashforth_fourth_step_a0fb06f58a9a3863fb11102d5a7ef1a35}} 
+\index{Bashforth\+Fourth\+Step@{Bashforth\+Fourth\+Step}!Bashforth\+Fourth\+Step@{Bashforth\+Fourth\+Step}}
+\index{Bashforth\+Fourth\+Step@{Bashforth\+Fourth\+Step}!Bashforth\+Fourth\+Step@{Bashforth\+Fourth\+Step}}
+\subsubsection{Bashforth\+Fourth\+Step()}
+{\footnotesize\ttfamily Bashforth\+Fourth\+Step\+::\+Bashforth\+Fourth\+Step (\begin{DoxyParamCaption}\item[{\textbf{ Input} \&}]{input,  }\item[{\textbf{ Solution} \&}]{solution }\end{DoxyParamCaption})}
+
+
+
+Constructor inherited from the \doxyref{Bashforth}{p.}{class_bashforth} class (also inherited from \doxyref{Vectorial\+O\+DE}{p.}{class_vectorial_o_d_e}) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & \+: \doxyref{Input}{p.}{class_input} object containing all variables needed to solve the O\+DE. \\
+\hline
+{\em solution} & \+: Output object where we will store the solution. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{class_bashforth_fourth_step_a0939c51b0c500627728eaee93f5d0d5c}} 
+\index{Bashforth\+Fourth\+Step@{Bashforth\+Fourth\+Step}!Solve\+Vectorial\+O\+DE@{Solve\+Vectorial\+O\+DE}}
+\index{Solve\+Vectorial\+O\+DE@{Solve\+Vectorial\+O\+DE}!Bashforth\+Fourth\+Step@{Bashforth\+Fourth\+Step}}
+\subsubsection{Solve\+Vectorial\+O\+D\+E()}
+{\footnotesize\ttfamily void Bashforth\+Fourth\+Step\+::\+Solve\+Vectorial\+O\+DE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Method allowing the implementation of Adam-\/\+Bashforth method 4 steps. This method is one of the several definition of the virtual inherited method. There are no arguments as all information needed are stored and are accessible in the input object. 
+
+\begin{DoxyReturn}{Returns}
+Void return as the solution is stored in the solution object. 
+\end{DoxyReturn}
+
+
+Implements \textbf{ Bashforth} \doxyref{}{p.}{class_bashforth}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Bashforth\+Fourth\+Step.\+h\item 
+Bashforth\+Fourth\+Step.\+cpp\end{DoxyCompactItemize}

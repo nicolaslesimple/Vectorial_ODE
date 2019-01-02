@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/nicolaslesimple/Group15/pcsc_VectorialODE_group15/Input.h
+iostream
+-
+string
+-
+vector
+-
+
+/Users/nicolaslesimple/Group15/pcsc_VectorialODE_group15/Solution.h
+Input.h
+/Users/nicolaslesimple/Group15/pcsc_VectorialODE_group15/Input.h
+vector
+-
+
+/Users/nicolaslesimple/Group15/pcsc_VectorialODE_group15/VectorialODE.h
+Input.h
+/Users/nicolaslesimple/Group15/pcsc_VectorialODE_group15/Input.h
+Solution.h
+/Users/nicolaslesimple/Group15/pcsc_VectorialODE_group15/Solution.h
+string
+-
+
+/Users/nicolaslesimple/Group15/pcsc_VectorialODE_group15/vector_test.cpp
+VectorialODE.h
+/Users/nicolaslesimple/Group15/pcsc_VectorialODE_group15/VectorialODE.h
+

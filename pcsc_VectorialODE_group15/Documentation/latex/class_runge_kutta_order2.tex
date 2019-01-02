@@ -1,0 +1,74 @@
+\section{Runge\+Kutta\+Order2 Class Reference}
+\label{class_runge_kutta_order2}\index{Runge\+Kutta\+Order2@{Runge\+Kutta\+Order2}}
+
+
+Class implementing the Runge-\/\+Kutta 2 steps to solve the O\+DE system. Runge-\/\+Kutta method allows the solving of the O\+DE system. This class is implementing in such a way that it only writes the solution every Write\+Output\+Timestep. This class is inherited from \doxyref{Runge\+Kutta}{p.}{class_runge_kutta} class also inherited from \doxyref{Vectorial\+O\+DE}{p.}{class_vectorial_o_d_e}.  
+
+
+
+
+{\ttfamily \#include $<$Runge\+Kutta\+Order2.\+h$>$}
+
+Inheritance diagram for Runge\+Kutta\+Order2\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_runge_kutta_order2}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Runge\+Kutta\+Order2} (\textbf{ Input} \&input, \textbf{ Solution} \&solution)
+\begin{DoxyCompactList}\small\item\em Constructor inherited from the \doxyref{Runge\+Kutta}{p.}{class_runge_kutta} class (also inherited from \doxyref{Vectorial\+O\+DE}{p.}{class_vectorial_o_d_e}) \end{DoxyCompactList}\item 
+void \textbf{ Solve\+Vectorial\+O\+DE} () override
+\begin{DoxyCompactList}\small\item\em Method allowing the implementation of Runge-\/\+Kutta method 2 step. This method is one of the several definition of the virtual inherited method. There are no arguments as all information needed are stored and are accessible in the input object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class implementing the Runge-\/\+Kutta 2 steps to solve the O\+DE system. Runge-\/\+Kutta method allows the solving of the O\+DE system. This class is implementing in such a way that it only writes the solution every Write\+Output\+Timestep. This class is inherited from \doxyref{Runge\+Kutta}{p.}{class_runge_kutta} class also inherited from \doxyref{Vectorial\+O\+DE}{p.}{class_vectorial_o_d_e}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_runge_kutta_order2_aa3a6b47fb671f0188a7150ab5a82a3c0}} 
+\index{Runge\+Kutta\+Order2@{Runge\+Kutta\+Order2}!Runge\+Kutta\+Order2@{Runge\+Kutta\+Order2}}
+\index{Runge\+Kutta\+Order2@{Runge\+Kutta\+Order2}!Runge\+Kutta\+Order2@{Runge\+Kutta\+Order2}}
+\subsubsection{Runge\+Kutta\+Order2()}
+{\footnotesize\ttfamily Runge\+Kutta\+Order2\+::\+Runge\+Kutta\+Order2 (\begin{DoxyParamCaption}\item[{\textbf{ Input} \&}]{input,  }\item[{\textbf{ Solution} \&}]{solution }\end{DoxyParamCaption})}
+
+
+
+Constructor inherited from the \doxyref{Runge\+Kutta}{p.}{class_runge_kutta} class (also inherited from \doxyref{Vectorial\+O\+DE}{p.}{class_vectorial_o_d_e}) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & \+: \doxyref{Input}{p.}{class_input} object containing all variables needed to solve the O\+DE. \\
+\hline
+{\em solution} & \+: Output object where we will store the solution. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{class_runge_kutta_order2_a87a676d85bac25f23c3cd5485b005a9f}} 
+\index{Runge\+Kutta\+Order2@{Runge\+Kutta\+Order2}!Solve\+Vectorial\+O\+DE@{Solve\+Vectorial\+O\+DE}}
+\index{Solve\+Vectorial\+O\+DE@{Solve\+Vectorial\+O\+DE}!Runge\+Kutta\+Order2@{Runge\+Kutta\+Order2}}
+\subsubsection{Solve\+Vectorial\+O\+D\+E()}
+{\footnotesize\ttfamily void Runge\+Kutta\+Order2\+::\+Solve\+Vectorial\+O\+DE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Method allowing the implementation of Runge-\/\+Kutta method 2 step. This method is one of the several definition of the virtual inherited method. There are no arguments as all information needed are stored and are accessible in the input object. 
+
+\begin{DoxyReturn}{Returns}
+Void return as the solution is stored in the solution object. 
+\end{DoxyReturn}
+
+
+Implements \textbf{ Runge\+Kutta} \doxyref{}{p.}{class_runge_kutta}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Runge\+Kutta\+Order2.\+h\item 
+Runge\+Kutta\+Order2.\+cpp\end{DoxyCompactItemize}

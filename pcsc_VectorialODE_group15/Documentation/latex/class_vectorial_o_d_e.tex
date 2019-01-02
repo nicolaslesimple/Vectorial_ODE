@@ -1,0 +1,222 @@
+\section{Vectorial\+O\+DE Class Reference}
+\label{class_vectorial_o_d_e}\index{Vectorial\+O\+DE@{Vectorial\+O\+DE}}
+
+
+Class allowing the definition O\+DE solvers. This is an abstract class. The method Solve\+Vectorial\+O\+DE is virtual and it will be defined in different ways in the inherited classes.  
+
+
+
+
+{\ttfamily \#include $<$Vectorial\+O\+D\+E.\+h$>$}
+
+Inheritance diagram for Vectorial\+O\+DE\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.971831cm]{class_vectorial_o_d_e}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_vectorial_o_d_e_af9b113dd66c8d39473f13238cd6cb465}} 
+\textbf{ Vectorial\+O\+DE} ()
+\begin{DoxyCompactList}\small\item\em Constructor by default which is empty. \end{DoxyCompactList}\item 
+\textbf{ Vectorial\+O\+DE} (\textbf{ Input} \&input\+\_\+object, \textbf{ Solution} \&solution\+\_\+object)
+\item 
+\mbox{\label{class_vectorial_o_d_e_aa4fe0065743c8c7554490b4a4e40cbe6}} 
+virtual void {\bfseries Solve\+Vectorial\+O\+DE} ()=0
+\item 
+vector$<$ double $>$ \textbf{ Get\+Columns\+Of\+Matrix} (vector$<$ vector$<$ double $>$$>$ matrix, int position)
+\begin{DoxyCompactList}\small\item\em Method allowing the access to one columns of one matrix. The chosen columns is define by the index. This method we be accessible in the inherited classes. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ double $>$ $>$ \textbf{ Multiply} (const vector$<$ vector$<$ double $>$$>$ \&matrix, double number)
+\begin{DoxyCompactList}\small\item\em Method allowing the multiplication of a matrix with a scalar. This method we be accessible in the inherited classes. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ double $>$ $>$ \textbf{ Addition} (const vector$<$ vector$<$ double $>$$>$ \&matrix, double number)
+\begin{DoxyCompactList}\small\item\em Method allowing the addition of a matrix with a scalar. This method we be accessible in the inherited classes. \end{DoxyCompactList}\item 
+vector$<$ double $>$ \textbf{ Multiply\+With\+Vector\+By\+Right} (const vector$<$ vector$<$ double $>$$>$ \&matrix, const vector$<$ double $>$ \&matrix\+\_\+columns)
+\begin{DoxyCompactList}\small\item\em Method allowing the multiplication of a matrix with a vector coming from the right side of the matrix. This method we be accessible in the inherited classes. \end{DoxyCompactList}\item 
+vector$<$ double $>$ \textbf{ Multiply\+Vector\+And\+Scalar} (const vector$<$ double $>$ \&vector\+\_\+to\+\_\+multiply, double scalar)
+\begin{DoxyCompactList}\small\item\em Method allowing the multiplication of a vector with a scalar. This method we be accessible in the inherited classes. \end{DoxyCompactList}\item 
+vector$<$ double $>$ \textbf{ Add\+Two\+Vector} (const vector$<$ double $>$ \&vector\+\_\+1, const vector$<$ double $>$ \&vector\+\_\+2)
+\begin{DoxyCompactList}\small\item\em Method allowing the addition of two vectors. This method we be accessible in the inherited classes. \end{DoxyCompactList}\item 
+vector$<$ double $>$ \textbf{ Subtract\+Two\+Vector} (const vector$<$ double $>$ \&vector\+\_\+1, const vector$<$ double $>$ \&vector\+\_\+2)
+\begin{DoxyCompactList}\small\item\em Method allowing the subtraction of two vectors. This method we be accessible in the inherited classes. \end{DoxyCompactList}\item 
+\mbox{\label{class_vectorial_o_d_e_a17cb307ae259061b38b6e24440ae175f}} 
+\textbf{ $\sim$\+Vectorial\+O\+DE} ()
+\begin{DoxyCompactList}\small\item\em Destructor by default. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_vectorial_o_d_e_a17c81799a866e20000f436510b0c5ef4}} 
+\textbf{ Input} $\ast$ {\bfseries input}
+\item 
+\mbox{\label{class_vectorial_o_d_e_a6b55b7c4ab7fefba07435530ba4a4ca6}} 
+\textbf{ Solution} $\ast$ {\bfseries solution}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class allowing the definition O\+DE solvers. This is an abstract class. The method Solve\+Vectorial\+O\+DE is virtual and it will be defined in different ways in the inherited classes. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_vectorial_o_d_e_a9edc40bdb493be8018bdc5c5844026bb}} 
+\index{Vectorial\+O\+DE@{Vectorial\+O\+DE}!Vectorial\+O\+DE@{Vectorial\+O\+DE}}
+\index{Vectorial\+O\+DE@{Vectorial\+O\+DE}!Vectorial\+O\+DE@{Vectorial\+O\+DE}}
+\subsubsection{Vectorial\+O\+D\+E()}
+{\footnotesize\ttfamily Vectorial\+O\+D\+E\+::\+Vectorial\+O\+DE (\begin{DoxyParamCaption}\item[{\textbf{ Input} \&}]{input\+\_\+object,  }\item[{\textbf{ Solution} \&}]{solution\+\_\+object }\end{DoxyParamCaption})}
+
+Constructor which overridden the default one. 
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+object} & \+: Object of \doxyref{Input}{p.}{class_input} class containing all the input informations we need to define and solve the problem. \\
+\hline
+{\em output\+\_\+object} & \+: Object of \doxyref{Solution}{p.}{class_solution} class containing the initialised solution matrix where we will write the results. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{class_vectorial_o_d_e_a043c8b38826411e8b7cb807a59c53048}} 
+\index{Vectorial\+O\+DE@{Vectorial\+O\+DE}!Addition@{Addition}}
+\index{Addition@{Addition}!Vectorial\+O\+DE@{Vectorial\+O\+DE}}
+\subsubsection{Addition()}
+{\footnotesize\ttfamily vector$<$ vector$<$ double $>$ $>$ Vectorial\+O\+D\+E\+::\+Addition (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ double $>$$>$ \&}]{matrix,  }\item[{double}]{number }\end{DoxyParamCaption})}
+
+
+
+Method allowing the addition of a matrix with a scalar. This method we be accessible in the inherited classes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & \+: Vector of vector of double representing the matrix we want to add. \\
+\hline
+{\em scalar} & \+: Integer corresponding to the scalar we want to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of vector of double (which is a matrix) corresponding to the output of the addition. 
+\end{DoxyReturn}
+\mbox{\label{class_vectorial_o_d_e_abb69cbfac6811f166d22a4cd394dd8fb}} 
+\index{Vectorial\+O\+DE@{Vectorial\+O\+DE}!Add\+Two\+Vector@{Add\+Two\+Vector}}
+\index{Add\+Two\+Vector@{Add\+Two\+Vector}!Vectorial\+O\+DE@{Vectorial\+O\+DE}}
+\subsubsection{Add\+Two\+Vector()}
+{\footnotesize\ttfamily vector$<$ double $>$ Vectorial\+O\+D\+E\+::\+Add\+Two\+Vector (\begin{DoxyParamCaption}\item[{const vector$<$ double $>$ \&}]{vector\+\_\+1,  }\item[{const vector$<$ double $>$ \&}]{vector\+\_\+2 }\end{DoxyParamCaption})}
+
+
+
+Method allowing the addition of two vectors. This method we be accessible in the inherited classes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector\+\_\+1} & \+: Vector of double representing the first vector we want to add. \\
+\hline
+{\em vector\+\_\+2} & \+: Vector of double representing the second vector we want to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of double (which is a vector) corresponding to the output of the addition. 
+\end{DoxyReturn}
+\mbox{\label{class_vectorial_o_d_e_adaa675ba0b63e1c2921fb25ce5f5da57}} 
+\index{Vectorial\+O\+DE@{Vectorial\+O\+DE}!Get\+Columns\+Of\+Matrix@{Get\+Columns\+Of\+Matrix}}
+\index{Get\+Columns\+Of\+Matrix@{Get\+Columns\+Of\+Matrix}!Vectorial\+O\+DE@{Vectorial\+O\+DE}}
+\subsubsection{Get\+Columns\+Of\+Matrix()}
+{\footnotesize\ttfamily vector$<$ double $>$ Vectorial\+O\+D\+E\+::\+Get\+Columns\+Of\+Matrix (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ double $>$$>$}]{matrix,  }\item[{int}]{position }\end{DoxyParamCaption})}
+
+
+
+Method allowing the access to one columns of one matrix. The chosen columns is define by the index. This method we be accessible in the inherited classes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & \+: Vector of vector of double representing the matrix we want to access. \\
+\hline
+{\em position} & \+: Integer corresponding to the index of the columns of the matrix we will return. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of double corresponding to one columns of the matrix given by the index 
+\end{DoxyReturn}
+\mbox{\label{class_vectorial_o_d_e_a2d34d64b401ee86f150132e98b6a986e}} 
+\index{Vectorial\+O\+DE@{Vectorial\+O\+DE}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!Vectorial\+O\+DE@{Vectorial\+O\+DE}}
+\subsubsection{Multiply()}
+{\footnotesize\ttfamily vector$<$ vector$<$ double $>$ $>$ Vectorial\+O\+D\+E\+::\+Multiply (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ double $>$$>$ \&}]{matrix,  }\item[{double}]{number }\end{DoxyParamCaption})}
+
+
+
+Method allowing the multiplication of a matrix with a scalar. This method we be accessible in the inherited classes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & \+: Vector of vector of double representing the matrix we want to multiply. \\
+\hline
+{\em scalar} & \+: Integer corresponding to the scalar we want to multiply. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of vector of double (which is a matrix) corresponding to the output of the multiplication. 
+\end{DoxyReturn}
+\mbox{\label{class_vectorial_o_d_e_a3d7e58c0622f616746ab13f5e9a7bb1c}} 
+\index{Vectorial\+O\+DE@{Vectorial\+O\+DE}!Multiply\+Vector\+And\+Scalar@{Multiply\+Vector\+And\+Scalar}}
+\index{Multiply\+Vector\+And\+Scalar@{Multiply\+Vector\+And\+Scalar}!Vectorial\+O\+DE@{Vectorial\+O\+DE}}
+\subsubsection{Multiply\+Vector\+And\+Scalar()}
+{\footnotesize\ttfamily vector$<$ double $>$ Vectorial\+O\+D\+E\+::\+Multiply\+Vector\+And\+Scalar (\begin{DoxyParamCaption}\item[{const vector$<$ double $>$ \&}]{vector\+\_\+to\+\_\+multiply,  }\item[{double}]{scalar }\end{DoxyParamCaption})}
+
+
+
+Method allowing the multiplication of a vector with a scalar. This method we be accessible in the inherited classes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector\+\_\+to\+\_\+multiply} & \+: Vector of double representing the vector we want to multiply. \\
+\hline
+{\em scalar} & \+: Integer corresponding to the scalar we want to multiply. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of double (which is a vector) corresponding to the output of the multiplication. 
+\end{DoxyReturn}
+\mbox{\label{class_vectorial_o_d_e_a224a5dc0650adbf96d6274d48f629eaf}} 
+\index{Vectorial\+O\+DE@{Vectorial\+O\+DE}!Multiply\+With\+Vector\+By\+Right@{Multiply\+With\+Vector\+By\+Right}}
+\index{Multiply\+With\+Vector\+By\+Right@{Multiply\+With\+Vector\+By\+Right}!Vectorial\+O\+DE@{Vectorial\+O\+DE}}
+\subsubsection{Multiply\+With\+Vector\+By\+Right()}
+{\footnotesize\ttfamily vector$<$ double $>$ Vectorial\+O\+D\+E\+::\+Multiply\+With\+Vector\+By\+Right (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ double $>$$>$ \&}]{matrix,  }\item[{const vector$<$ double $>$ \&}]{matrix\+\_\+columns }\end{DoxyParamCaption})}
+
+
+
+Method allowing the multiplication of a matrix with a vector coming from the right side of the matrix. This method we be accessible in the inherited classes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & \+: Vector of vector of double representing the matrix we want to multiply. \\
+\hline
+{\em matrix\+\_\+columns} & \+: Vector of double corresponding to the vector we want to multiply. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of double (which is a vector) corresponding to the output of the multiplication. 
+\end{DoxyReturn}
+\mbox{\label{class_vectorial_o_d_e_a0abfaf1b1fbdd1d0e7ac044da4165432}} 
+\index{Vectorial\+O\+DE@{Vectorial\+O\+DE}!Subtract\+Two\+Vector@{Subtract\+Two\+Vector}}
+\index{Subtract\+Two\+Vector@{Subtract\+Two\+Vector}!Vectorial\+O\+DE@{Vectorial\+O\+DE}}
+\subsubsection{Subtract\+Two\+Vector()}
+{\footnotesize\ttfamily vector$<$ double $>$ Vectorial\+O\+D\+E\+::\+Subtract\+Two\+Vector (\begin{DoxyParamCaption}\item[{const vector$<$ double $>$ \&}]{vector\+\_\+1,  }\item[{const vector$<$ double $>$ \&}]{vector\+\_\+2 }\end{DoxyParamCaption})}
+
+
+
+Method allowing the subtraction of two vectors. This method we be accessible in the inherited classes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector\+\_\+1} & \+: Vector of double representing the first vector we want to subtract. \\
+\hline
+{\em vector\+\_\+2} & \+: Vector of double representing the second vector we want to subtract. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of double (which is a vector) corresponding to the output of the subtraction. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Vectorial\+O\+D\+E.\+h\item 
+Vectorial\+O\+D\+E.\+cpp\end{DoxyCompactItemize}

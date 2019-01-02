@@ -1,0 +1,55 @@
+\section{Bashforth Class Reference}
+\label{class_bashforth}\index{Bashforth@{Bashforth}}
+
+
+Class allowing a more precise definition of one of the O\+DE solvers technics which is Adam-\/\+Bashforth method. This is an abstract class as before because the method Solve\+Vectorial\+O\+DE is virtual and it will be defined in different ways in the inherited classes. The different Adam-\/\+Bashforth method correspond to the different order we use to solve the system.  
+
+
+
+
+{\ttfamily \#include $<$Bashforth.\+h$>$}
+
+Inheritance diagram for Bashforth\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.957747cm]{class_bashforth}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Bashforth} (\textbf{ Input} \&input, \textbf{ Solution} \&solution)
+\begin{DoxyCompactList}\small\item\em Constructor inherited from the \doxyref{Vectorial\+O\+DE}{p.}{class_vectorial_o_d_e} class. \end{DoxyCompactList}\item 
+\mbox{\label{class_bashforth_a48d3c2ffe153668992b6e8b79401ac87}} 
+virtual void {\bfseries Solve\+Vectorial\+O\+DE} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class allowing a more precise definition of one of the O\+DE solvers technics which is Adam-\/\+Bashforth method. This is an abstract class as before because the method Solve\+Vectorial\+O\+DE is virtual and it will be defined in different ways in the inherited classes. The different Adam-\/\+Bashforth method correspond to the different order we use to solve the system. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_bashforth_ab53efe42b59a80a51731b67ee982f71c}} 
+\index{Bashforth@{Bashforth}!Bashforth@{Bashforth}}
+\index{Bashforth@{Bashforth}!Bashforth@{Bashforth}}
+\subsubsection{Bashforth()}
+{\footnotesize\ttfamily Bashforth\+::\+Bashforth (\begin{DoxyParamCaption}\item[{\textbf{ Input} \&}]{input,  }\item[{\textbf{ Solution} \&}]{solution }\end{DoxyParamCaption})}
+
+
+
+Constructor inherited from the \doxyref{Vectorial\+O\+DE}{p.}{class_vectorial_o_d_e} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & \+: \doxyref{Input}{p.}{class_input} object containing all variables needed to solve the O\+DE. \\
+\hline
+{\em solution} & \+: Output object where we will store the solution. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Bashforth.\+h\item 
+Bashforth.\+cpp\end{DoxyCompactItemize}
